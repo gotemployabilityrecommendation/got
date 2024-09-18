@@ -57,12 +57,13 @@ class Recommendation():
         return formated_html
 
     def _get_current_location(self):
-        g = geocoder.ip('me')
-        if g.latlng:
-            latitude, longitude = g.latlng
-            return latitude, longitude
-        else:
-            return None, None
+        return 2.9277769,101.6393255
+        # g = geocoder.ip('me')
+        # if g.latlng:
+        #     latitude, longitude = g.latlng
+        #     return latitude, longitude
+        # else:
+        #     return None, None
 
     def _show_page(self,js,jss,percentage,faculty_domain):
         map_obj = CustomMap()
@@ -82,7 +83,7 @@ class Recommendation():
             label="State", options=states, label_visibility='collapsed')
 
         col2.markdown(
-            f"""<div style="color:black; font-size:24px; font-weight:900">Companies Near Me({curr_lat},{curr_lon})</div>""", unsafe_allow_html=True)
+            f"""<div style="color:black; font-size:24px; font-weight:900">Companies Near MMU, Cyberjaya </div>""", unsafe_allow_html=True)
         col1, col_m, col2 = st.columns([.4, .2, .4])
 
         map1 = map_obj.get_state_and_map_data_with_jss(
