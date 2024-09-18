@@ -46,8 +46,8 @@ def radar(cat, got, emp, container = st):
     )
     # fig.update_layout(title="Probability of GOT and Employability for each Faculty Domain")
     fig.update_layout(title = "Which Domain Seems Like the Right Fit for Me?")
-    fig.update_layout(width = 500, height = 270)
-    container.plotly_chart(fig)
+    fig.update_layout(width = 500, height = 250)
+    container.plotly_chart(fig, use_container_width = True)
 
 def similarity_score(a, b):
     if a+b == 0:
@@ -115,9 +115,9 @@ def bar(success_df, temp_state, container = st):
     xaxis_title="Success GOT (%)",
     yaxis_title="Faculty Domain"
     )
-    fig.update_layout(width = 500, height = 270)
+    fig.update_layout(width = 500, height = 250)
     fig.update_layout(yaxis=dict(autorange="reversed"))
-    container.plotly_chart(fig)
+    container.plotly_chart(fig, use_container_width = True)
     
 def shadow():
     st.markdown(
