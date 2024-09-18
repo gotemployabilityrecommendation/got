@@ -57,12 +57,13 @@ class Recommendation():
         return formated_html
 
     def _get_current_location(self):
-        g = geocoder.ip('me')
-        if g.latlng:
-            latitude, longitude = g.latlng
-            return latitude, longitude
-        else:
-            return None, None
+        return 2.9277769,101.6393255
+        # g = geocoder.ip('me')
+        # if g.latlng:
+        #     latitude, longitude = g.latlng
+        #     return latitude, longitude
+        # else:
+        #     return None, None
 
     def _show_page(self,js,jss,percentage,faculty_domain):
         map_obj = CustomMap()
