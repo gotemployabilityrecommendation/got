@@ -227,7 +227,7 @@ class PoiBasedMap:
                     zoom=zoom
                 ),
             )
-            fig.update_layout(width = 675, height = 430)
+            fig.update_layout(width = 675, height = 435)
             # fig.show()
             st.plotly_chart(fig, use_container_width = True)
         else:
